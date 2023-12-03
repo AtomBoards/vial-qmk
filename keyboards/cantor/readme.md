@@ -1,30 +1,33 @@
-# cantor
+# Cantor by AtomBoards
 
-![cantor](https://i.imgur.com/Uvxm3zVh.jpg)
+![Cantor](https://imgur.com/lvG6ztl)
 
-The Cantor keyboard is a 42 key diodeless split keyboard, designed with simplicity in mind. It is inspired on the popular [corne](https://github.com/foostan/crkbd), [ferris](https://github.com/pierrechevalier83/ferris) and [sweep](https://github.com/davidphilipbarr/Sweep) keyboards, aiming to provide a more ergonomic (stronger column stagger) corne-like layout with a simple, easy to assemble and cheap design.
+Клавиатура Cantor от AtomBoards — это разделенная клавиатура с 42 клавишами без диодов, разработанная с упором на простоту. Она вдохновлена популярными клавиатурами [corne](https://github.com/foostan/crkbd), [ferris](https://github.com/pierrechevalier83/ferris) и [sweep](https://github.com/davidphilipbarr/Sweep), целью которой является предоставление более эргономичной раскладки в стиле corne с простой, легкой в сборке и недорогой конструкцией.
 
-* Keyboard Maintainer: [Diego Palacios](https://github.com/diepala)
-* Hardware Supported: Blackpill STM32F401
-* Hardware Availability: https://github.com/diepala/cantor
+Спасибо за уточнение. Вот обновленная инструкция, учитывающая ваше замечание:
 
-Make example for this keyboard (after setting up your build environment):
+## Компиляция и прошивка с использованием QMK MSYS и QMK Toolbox
 
-    make cantor:default
+### Установка QMK MSYS
+1. Скачайте и установите [QMK MSYS](https://msys.qmk.fm/).
+2. После установки запустите QMK MSYS.
 
-Flashing example for this keyboard:
-
-    make cantor:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the top left key and plug in the keyboard. For the right side, hold the top right key and plug the keyboard.
-* **Physical reset button**: 
-  * Press and hold the BOOT0 button.
-  * Press and release the NRST button.
-  * Release the BOOT0 button.
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+### Компиляция и прошивка клавиатуры
+1. В QMK MSYS, клонируйте репозиторий AtomBoards/vial-qmk, если вы этого еще не сделали:
+   ```
+   git clone https://github.com/AtomBoards/vial-qmk
+   ```
+2. Перейдите в папку с репозиторием QMK:
+   ```
+   cd vial-qmk
+   ```
+3. Сначала скомпилируйте прошивку для левой стороны клавиатуры командой:
+   ```
+   qmk flash -kb cantor -km vial -bl dfu-util-split-left
+   ```
+   Когда в консоли появится запрос на перевод платы в режим bootloader, сначала зажмите кнопку BOOT0 на клавиатуре, затем нажмите и отпустите кнопку NRST, и после этого отпустите кнопку BOOT0.
+4. Повторите процесс для правой стороны клавиатуры, используя команду:
+   ```
+   qmk flash -kb cantor -km vial -bl dfu-util-split-right
+   ```
+   Используйте те же шаги для перевода платы в режим bootloader.

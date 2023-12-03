@@ -1,7 +1,7 @@
 {
-    "manufacturer": "Diego Palacios",
+    "manufacturer": "AtomBoards",
     "keyboard_name": "cantor",
-    "maintainer": "diepala",
+    "maintainer": "AtomBoards",
     "bootloader": "stm32-dfu",
     "features": {
         "bootmagic": true,
@@ -13,7 +13,7 @@
     },
     "processor": "STM32F401",
     "board": "BLACKPILL_STM32_F401",
-    "url": "https://github.com/diepala/cantor",
+    "url": "https://github.com/AtomBoards/cantor",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",

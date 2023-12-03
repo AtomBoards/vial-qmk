@@ -1,12 +1,12 @@
-// Copyright 2022 Diego Palacios (@diepala)
+// Copyright 2023 Atomboards 
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
 
+#define EE_HANDS
 #define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
 #define SERIAL_USART_TX_PIN B6     // USART TX pin
 #define SERIAL_USART_RX_PIN B7     // USART RX pin
-
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
