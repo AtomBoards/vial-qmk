@@ -2,9 +2,7 @@
 
 ![Cantor](https://i.imgur.com/lvG6ztl.png)
 
-Клавиатура Cantor от AtomBoards — это разделенная клавиатура с 42 клавишами без диодов, разработанная с упором на простоту. Она вдохновлена популярными клавиатурами [corne](https://github.com/foostan/crkbd), [ferris](https://github.com/pierrechevalier83/ferris) и [sweep](https://github.com/davidphilipbarr/Sweep), целью которой является предоставление более эргономичной раскладки в стиле corne с простой, легкой в сборке и недорогой конструкцией.
-
-Спасибо за уточнение. Вот обновленная инструкция, учитывающая ваше замечание:
+Клавиатура Cantor — это разделенная клавиатура с 42 клавишами без диодов, разработанная с упором на простоту. Она вдохновлена популярными клавиатурами [corne](https://github.com/foostan/crkbd), [ferris](https://github.com/pierrechevalier83/ferris) и [sweep](https://github.com/davidphilipbarr/Sweep), целью которой является предоставление более эргономичной раскладки в стиле corne с простой, легкой в сборке и недорогой конструкцией. Раскладка основана на [Watchman-layouts](https://github.com/aroum/Watchman-layouts).
 
 ## Компиляция и прошивка с использованием QMK MSYS
 
